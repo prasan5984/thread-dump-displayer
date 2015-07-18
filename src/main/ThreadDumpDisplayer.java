@@ -346,7 +346,7 @@ public class ThreadDumpDisplayer implements ActionListener
 		c.weightx = .9;
 		//c.weighty = .4;
 		c.gridwidth = 1;
-		c.anchor = GridBagConstraints.LINE_START;
+		//c.anchor = GridBagConstraints.LINE_START;
 		c.insets = new Insets( 50, 10, 50, 10 );
 			
 
@@ -357,6 +357,7 @@ public class ThreadDumpDisplayer implements ActionListener
 		
 		startPanel.add( logLabel, c );
 
+		c = new GridBagConstraints();
 		c.weightx = 1;
 		c.weighty = 0;
 		c.gridwidth = 3;
@@ -366,6 +367,7 @@ public class ThreadDumpDisplayer implements ActionListener
 
 		startPanel.add( table.getTableHeader(), c );
 
+		c = new GridBagConstraints();
 		c.gridy = 2;
 		c.weighty = .7;
 		c.anchor = GridBagConstraints.PAGE_START;

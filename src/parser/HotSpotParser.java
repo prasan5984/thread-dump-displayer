@@ -177,6 +177,10 @@ public class HotSpotParser
 	private void parseMonitor( Map< String, ArrayList< Monitor > > monitorStatusMap, String str )
 	{
 		Matcher m = LogSections.MonitorDetail.getMatcher( str );
+		
+		if ( !m.matches() )
+			return;
+		
 		String id = m.group( ParserConstants.MONITOR_ID );
 		Monitor monitor = (Monitor)session.getEntity( EntityName.MONITOR, id );
 
